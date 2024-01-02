@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <style>
+          body {
+              margin: 0;
+              background-color: rgba(4, 14, 23);
+              font-family: Cursed Timer ULiL;
+          }
+
+
+          .container {
+             display:flex;
+          justify-content: space-around;
+              font-family: Verdana;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 36px;
+          letter-spacing: 0em;
+          text-align: center;
+          background-color: rgba(66, 64, 60);
+          width:60vw;
+          height:60vh;
+          margin:auto;
+          margin-top:70px;
+          border: 2px solid grey;
+          border-radius: 4px;
+          }
+
+          .close{
+           width: 117px;
+          height: 120px;
+          color: black;
+          border:2px solid grey;
+          font-size:40px;
+          border-radius:4px;
+          background-color: rgba(105, 85, 52);
+          }
+          .close.highlight{
+            background-color: rgba(105, 56, 23);
+          }
+          .btn {
+              color:#9AABD8;;
+              font-size: 18px;
+              background-color: transparent;
+              border:1px solid white;
+              border-radius:3px;
+          }
+          /* populated-state */
+          #mybtn{
+            text-align: center;
+            color:white;
+            font-weight: 600;
+            background-color: rgba(23, 48, 23);
+            padding:15px 40px;
+            border:none;
+            margin-left:600px;
+            margin-top:20px;
+            border-radius:4px;
+          }
+          </style>
+    </head>
+    <body>
+      <div>
+        <div class="container">
+            <div>
+                <h3 style="color:white;font-family:Verdana;">HOME</h3>
+                <div class="close"><p id="sum-el">0</p></div>
+                <button class="btn" onclick="add1Points()">+1</button>
+                <button  class="btn" onclick="add2Points()">+2</button>
+                <button  class="btn" onclick="add3Points()">+3</button>
+            </div>
+            <div>
+                <h3 style="color:white;font-family:Verdana;">GUEST</h3>
+                <div class="close"><p id="num-el">0</p></div>
+                 <button  class="btn" onclick="addOnePoints()">+1</button>
+                <button  class="btn" onclick="addTwoPoints()">+2</button>
+                <button  class="btn" onclick="addThreePoints()">+3</button>
+            </div>
+
+            </div>
+              <button onclick="newGame()" id="mybtn">NEW GAME</button>
+</div>
+        <script>
+          let sumEl = document.getElementById("sum-el");
+          let numEl = document.getElementById("num-el");
+          let count = 0;
+          let count1 = 0;
+
+          function add1Points(){
+             count += 1;
+             sumEl.textContent = count;
+             // sumEl.textContent = 0;
+             if (count > count1) {
+                  document.querySelector("#sum-el").classList.add("highlight");
+              } else if (count1 > count) {
+                  document.querySelector("#num-el").classList.add("highlight");
+              }
+
+          }
+          function add2Points(){
+              count += 2;
+              sumEl.textContent = count;
+              if (count > count1) {
+                  document.querySelector("#sum-el").classList.add("highlight");
+              } else if (count1 > count) {
+                  document.querySelector("#num-el").classList.add("highlight");
+              }
+
+          }
+          function add3Points(){
+              count += 3;
+              sumEl.textContent = count;
+              if (count > count1) {
+                  document.querySelector("#sum-el").classList.add("highlight");
+              } else if (count1 > count) {
+                  document.querySelector("#num-el").classList.add("highlight");
+              }
+
+          }
+          function addOnePoints(){
+              count1 += 1;
+              numEl.textContent = count1;
+              if (count > count1) {
+                  document.querySelector("#sum-el").classList.add("highlight");
+              } else if (count1 > count) {
+                  document.querySelector("#num-el").classList.add("highlight");
+              }
+
+          }
+          function addTwoPoints(){
+              count1 += 2;
+              numEl.textContent = count1;
+              if (count > count1) {
+                  document.querySelector("#sum-el").classList.add("highlight");
+              } else if (count1 > count) {
+                  document.querySelector("#num-el").classList.add("highlight");
+              }
+
+          }
+          function addThreePoints(){
+              count1 += 3;
+              numEl.textContent = count1;
+              if (count > count1) {
+                  document.querySelector("#sum-el").classList.add("highlight");
+              } else if (count1 > count) {
+                  document.querySelector("#num-el").classList.add("highlight");
+              }
+
+          }
+          function newGame(){
+            count = 0;
+            count1 = 0;
+            sumEl.textContent = count;
+            numEl.textContent = count1;
+          }
+
+        </script>
+    </body>
+</html>
